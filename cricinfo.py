@@ -1,7 +1,7 @@
 from BeautifulSoup import BeautifulSoup
 import urllib2, re
 
-page = urllib2.urlopen("http://www.espncricinfo.com/indian-premier-league-2015/content/series/695871.html?template=fixtures")
+page = urllib2.urlopen("http://www.espncricinfo.com/indian-premier-league-2015/content/series/791129.html?template=fixtures")
 soup = BeautifulSoup(page)
 soup.prettify()
 dates = soup.findAll("li",{"venue":re.compile("[0-9]*")})
